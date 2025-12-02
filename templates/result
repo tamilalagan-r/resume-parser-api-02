@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extracted Data</title>
+</head>
+
+<body>
+    <h2>Extracted Resume Data</h2>
+
+    {% for item in results %}
+        <h3>File: {{ item['File Name'] }}</h3>
+        <ul>
+            {% for key, value in item.items() %}
+                <li><b>{{ key }}:</b> {{ value }}</li>
+            {% endfor %}
+        </ul>
+        <hr>
+    {% endfor %}
+
+    <a href="/">Upload Again</a>
+</body>
+</html>
